@@ -1,0 +1,4 @@
+record
+======
+
+code for fun
