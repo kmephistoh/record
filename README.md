@@ -1,4 +1,3 @@
 record
 ======
-
-code for fun
+From now on，code for fun
