@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-#-*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 import sys
 def factorial(n):
     if n==0:
@@ -7,5 +7,5 @@ def factorial(n):
     else:
         return n*factorial(n-1)
 
-print "¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿"
-print sys.argv[1]+"¿¿¿¿¿ %d" % factorial(int(sys.argv[1])) 
+print "ä»Šå¤©ä¸€ä¸ªç®€å•çš„é˜¶ä¹˜éƒ½å†™é”™äº†ï¼Œç½ªè¿‡"
+print sys.argv[1]+"çš„é˜¶ä¹˜æ˜¯ï¼š%d" % factorial(int(sys.argv[1])) 
