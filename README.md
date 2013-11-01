@@ -1,6 +1,6 @@
 record
 ======
-From now on，code for fun
+Code for fun
 
 examples  --->练习
 
