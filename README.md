@@ -1,8 +1,8 @@
-record
+#record
 ======
-From now on，code for fun
+##From now on，code for fun
 
-examples  --->练习
+- examples  --->练习
 
-the-django-book  --->django学习
+- the-django-book  --->django学习
 
