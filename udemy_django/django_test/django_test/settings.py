@@ -22,6 +22,7 @@ SECRET_KEY = 'y(=f7%%+*g!f4aq_lxv3*%rd2$)6087a71kks*va^v-b+d@^#7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
