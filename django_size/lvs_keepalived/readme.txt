@@ -6,3 +6,6 @@
 5.测试
    ipvsadm -Ln
    ip addr
+
+
+http://www.linuxvirtualserver.org/docs/ha/keepalived.html
