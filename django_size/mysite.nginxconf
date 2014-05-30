@@ -1,5 +1,6 @@
 # 参考：http://michal.karzynski.pl/blog/2013/06/09/django-nginx-gunicorn-virtualenv-supervisor/
 # 配好nignx后，运行 gunicorn_start ，浏览器访问url即可
+# 本配置文件放入/etc/nginx/site_enabled
 upstream mysite_server {
   # fail_timeout=0 means we always retry an upstream even if it failed
   # to return a good HTTP response (in case the Unicorn master nukes a
