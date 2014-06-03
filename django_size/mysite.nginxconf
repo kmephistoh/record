@@ -16,8 +16,8 @@ server {
  
     client_max_body_size 4G;
  
-    access_log /home/kevin/other/record/django_size/logs/nginx-access.log;
-    error_log /home/kevin/other/record/django_size/logs/nginx-error.log;
+    access_log /var/log/nginx/nginx-access.log;
+    error_log /var/log/nginx/nginx-error.log;
  
     location /static/ {
         alias   /home/kevin/other/record/django_size/static/;
