@@ -9,7 +9,7 @@ from django.forms import ModelForm
 class DeviceRouter(models.Model):
 	"""router info"""
 	device_id = models.CharField(max_length=200)          #第几组
-	mac = models.CharField(max_length=200)
+	mac = models.CharField(max_length=200, unique= True)
 	state_info = models.CharField(max_length=200)
 	extro_info = models.TextField()
 	pub_date = models.DateTimeField('date_publisehd')

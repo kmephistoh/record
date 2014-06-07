@@ -9,4 +9,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'mysite.views.home', name='home'),
     url(r'^index$', views.index),
     url(r'^home$', views.device_list),
+    url(r'^create/$', views.create_device),
+    url(r'^update/$', views.update_device),
 )
