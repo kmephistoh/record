@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'mysite.views.home', name='home'),
     url(r'^index$', views.index),
     url(r'^home$', views.article_list),
+    url(r'^login$', views.login_view),
 )

@@ -6,6 +6,12 @@
 - 第三方登录
 - Markdown 编辑发表文章
 - 全局搜索功能(初步完成,还差中文分词，页面调整)
+- ansible自动部署
+- nagios各项监控
+- dockerfile
+- ElasticSearch
+- varnish
+- redis
 
 
 ## 运维系统
