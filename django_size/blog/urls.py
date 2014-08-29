@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
 from blog import views
 
 from django.contrib import admin
@@ -10,4 +10,6 @@ urlpatterns = patterns('',
     url(r'^index$', views.index),
     url(r'^home$', views.article_list),
     url(r'^login$', views.login_view),
+    url(r'^about$', views.about),
+    url(r'^contact$', views.contact),
 )

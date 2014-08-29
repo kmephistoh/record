@@ -8,11 +8,15 @@ from blog.models import *
 def index(request):
     return render(request, "index.html")
 
+def about(request):
+    return render(request, "about.html")
+
+def contact(request):
+    return render(request, "contact.html")
 
 def logout_view(request):
     logout(request)
     # Redirect to a success page.
-
 
 def login_view(request):
     if request.method=='POST':
@@ -30,8 +34,6 @@ def login_view(request):
             return render(request, 'login.html', {"error_message":error_message})
     else:
         return render(request, 'login.html')
-
-
 
 def article_list(request):
     articles_list =  Article.objects.all()
