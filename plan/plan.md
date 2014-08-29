@@ -6,3 +6,5 @@
 - Network program
 - js
 - performance
+- redis
+- mongodb

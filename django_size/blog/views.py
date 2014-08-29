@@ -1,15 +1,12 @@
 from django.http import HttpResponse
-from django.shortcuts import render_to_response, redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.template import RequestContext
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from blog.models import * 
 
-# Create your views here.
-
 
 def index(request):
-    return render_to_response("index.html")
+    return render(request, "index.html")
 
 
 def logout_view(request):
@@ -18,23 +15,22 @@ def logout_view(request):
 
 
 def login_view(request):
-    print request.POST
-    username = request.POST.get('username', False)
-    password = request.POST.get('password', False)
-    user = authenticate(username=username, password=password)
-    print username
-    print 
-    print user
-    if user is not None:
-        print "ok"
-        if user.is_active:
-            login(request, user)
-            redirect('/home/blog')
+    if request.method=='POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return redirect('/blog/home')
+            else:
+                return HttpResponse("Your account is disabled.")
         else:
-            return HttpResponse("Your account is disabled.")
+            error_message='username or password were incorrect.'
+            return render(request, 'login.html', {"error_message":error_message})
     else:
-        error_message='The username and password were incorrect.'
-        return render_to_response('login.html', {"error_message":error_message}, context_instance=RequestContext(request))
+        return render(request, 'login.html')
+
 
 
 def article_list(request):
@@ -50,7 +46,7 @@ def article_list(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         articles = paginator.page(paginator.num_pages)
         
-    return render_to_response('article_list.html', 
+    return render(request, 'article_list.html', 
         {"articles":articles}
         )
 
