@@ -10,20 +10,15 @@
       </div>
     {% endfor %}
 
-  <div class="pagination">
-      <span class="step-links">
-          {% if articles.has_previous %}
-              <a href="?page={{ articles.previous_page_number }}">previous</a>
+    <ul class="pagination">
+      {% if articles.has_previous %}
+        <li><a href="?page={{ articles.previous_page_number }}">&laquo;</a></li>
+      {% endif %}
+      <li class="active"><a href="?page={{ articles.number }}">{{ articles.number }}</a></li>
+      <li><a href="?page={{ articles.number }}">{{ articles.number }}</a></li>
+      {% if articles.has_next %}
+        <li><a href="?page={{ articles.next_page_number }}">&raquo;</a></li>
           {% endif %}
-
-          <span class="current">
-              Page {{ articles.number }} of {{ articles.paginator.num_pages }}.
-          </span>
-
-          {% if articles.has_next %}
-              <a href="?page={{ articles.next_page_number }}">next</a>
-          {% endif %}
-      </span>
-  </div>
+    </ul>
 
 {% endblock %}

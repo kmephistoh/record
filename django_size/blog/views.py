@@ -37,7 +37,7 @@ def login_view(request):
 
 def article_list(request):
     articles_list =  Article.objects.all()
-    paginator = Paginator(articles_list, 5) # Show 5 articles per page
+    paginator = Paginator(articles_list, 1) # Show 5 articles per page
     page = request.GET.get('page')
     try:
         articles = paginator.page(page)
