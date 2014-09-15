@@ -9,5 +9,6 @@ urlpatterns = patterns('',
     url(r'^blog/', include('blog.urls')),
     url(r'^device/', include('device.urls')),
     url(r'^search/', include('haystack.urls')),
+    url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/', include(admin.site.urls)),
 )
