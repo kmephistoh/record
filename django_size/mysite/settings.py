@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'blog',
     'device',
     'haystack',
+    'markdown_deux',
 )
 
 MIDDLEWARE_CLASSES = (
