@@ -4,3 +4,5 @@ whoosh
 jieba
 django-grappelli
 django-markdown-deux
+redis
+django-redis-cache
