@@ -28,6 +28,10 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ')31@4dn2@so&ti-#a#_wu!_$_(l_&$u5p2(wqk+6ddz$3kx3ee'
+RAVEN_CONFIG = {
+    #'dsn': 'http://b4bab63230e74008979fb1ecfae1febb:cb22c14208434bc782c69961f892fb48@localhost:9000/2',
+    'dsn': 'http://b4bab63230e74008979fb1ecfae1febb:cb22c14208434bc782c69961f892fb48@10.192.72.226:9000/2',
+}
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -51,6 +55,7 @@ INSTALLED_APPS = (
     'device',
     'haystack',
     'markdown_deux',
+    'raven.contrib.django.raven_compat',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -126,6 +131,7 @@ STATICFILES_FINDERS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
+    "django.contrib.messages.context_processors.messages",
     "django.contrib.auth.context_processors.auth",
 
 )

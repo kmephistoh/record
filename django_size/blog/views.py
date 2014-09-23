@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from blog.models import * 
 
@@ -49,7 +50,13 @@ def article_list(request):
         articles = paginator.page(paginator.num_pages)
         
     return render(request, 'article_list.html', 
-        {"articles":articles}
+        {"articles": articles}
+        )
+
+def count_like(request):
+    # messages.success(request, 'Thank you!')
+    messages.error(request, "Don't repeat voting" )
+    return render(request, "index.html", 
         )
 
 

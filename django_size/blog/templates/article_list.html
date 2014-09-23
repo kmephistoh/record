@@ -4,7 +4,7 @@
 
     {% for article in articles %}
       <h2>{{ article.title }}</h2>
-      <a href="#" class="css_btn_like">like|{{ article.likes }}</a> {{ article.pub_date}}
+      <a href="/blog/count_like" class="css_btn_like"> like|{{ article.likes }} </a> {{ article.pub_date}}
       <hr>
       <div>
         {{ article.content|markdown }}
